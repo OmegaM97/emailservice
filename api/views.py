@@ -6,10 +6,12 @@ from django.core.mail import send_mail
 from django.conf import settings
 from .serializers import EmailSerializer
 from datetime import datetime
+from rest_framework.parsers import JSONParser
 
 
 class SendEmailView(APIView):
     permission_classes = [IsAuthenticated]
+    parser_classes = [JSONParser]
 
     def post(self, request):
         serializer = EmailSerializer(data=request.data)
