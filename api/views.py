@@ -24,7 +24,7 @@ class SendEmailView(APIView):
 
             developer_email = request.user.email
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            email_subject = f"New sunmission from: {website_url}"
+            email_subject = f"New submission from: {website_url}"
             email_body = f"""
 You received a new submission from your form!
 

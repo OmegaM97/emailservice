@@ -9,6 +9,7 @@ djangorestframework = "*"
 djoser = "*"
 gunicorn = "*"
 django-cors-headers = "*"
+django-anymail = "*"
 
 [dev-packages]
 
